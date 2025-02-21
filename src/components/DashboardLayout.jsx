@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
+
 export function DashboardLayout() {
   const navigate = useNavigate();
 

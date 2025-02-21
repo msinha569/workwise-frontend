@@ -6,16 +6,18 @@ import ShowWork from './pages/ShowWork';
 import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import FeedbackPage from './pages/FeedbackForm';
+import CreateTask from './pages/CreateTask';
 
 function App() {
   return (
       <Routes>
         <Route path="/profilemanagement" element={<ProfileManagement />} />
-        <Route path="/workmanagement" element={<WorkManagement />} />
+        {/* <Route path="/workmanagement" element={<WorkManagement />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/showwork" element={<ShowWork />} />
         <Route path='/' element={<Home/>}/>
         <Route path='/feedback' element={<FeedbackPage/>}/>
+        <Route path="/createtask" element={<CreateTask />} />
       </Routes>
   );
 }
