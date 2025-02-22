@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Brain, Users, Calendar, Target, Shield, BarChart as ChartBar, Clock, Zap, CheckCircle, Mail, Phone, MapPin, Star } from 'lucide-react';
 import { AuthModal } from '../components/AuthModal';
+import { Link } from 'react-router-dom';
 
 function Home() {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -15,8 +16,11 @@ function Home() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       <header className="bg-white shadow-sm">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+
+
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
+
               <Brain className="h-8 w-8 text-indigo-600" />
               <span className="text-2xl font-bold text-gray-900">Workwise</span>
             </div>
@@ -34,6 +38,7 @@ function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                   <div>
+
                     <h1 className="text-5xl font-bold text-gray-900 mb-6">
                       Transform Your Workplace with AI-Powered Management
                     </h1>
@@ -41,19 +46,21 @@ function Home() {
                       Revolutionize your organization with our intelligent intranet solution that optimizes work allocation, enhances productivity, and creates a harmonious workplace environment.
                     </p>
                     <div className="flex gap-4">
+                      <Link to={'/createtask'}>
                       <button
-                        onClick={() => openAuthModal('signup')}
+                        
                         className="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors text-lg font-semibold"
                       >
                         Get Started
-                      </button>
-                      <button className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors text-lg font-semibold">
-                        Learn More
-                      </button>
+                      </button></Link>
+                      <Link to={'/dashboard'} >
+                        <button className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg hover:bg-indigo-50 transition-colors text-lg font-semibold">
+                        Dashboard
+                        </button>
+                      </Link>
                     </div>
                   </div>
                   <div className="space-y-6">
-                    {/* Calendar Preview */}
                     <div className="bg-white rounded-xl shadow-lg p-6">
                       <div className="flex justify-between items-center mb-4">
                         <h3 className="text-lg font-semibold text-gray-900">Team Schedule</h3>
@@ -76,7 +83,6 @@ function Home() {
                       </div>
                     </div>
 
-                    {/* Employee ID Card */}
                     <div className="bg-white rounded-xl shadow-lg p-6">
                       <div className="flex gap-4">
                         <div className="w-24 h-24 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
@@ -143,7 +149,7 @@ function Home() {
                     <FeatureCard
                       icon={<Users className="h-8 w-8 text-indigo-600" />}
                       title="Smart Team Allocation"
-                      description="AI-driven matching of employees to projects based on skills, experience, and workload."
+                      description="AI-driven matching of employees to projects based on skills, expeirence, and workload."
                     />
                     <FeatureCard
                       icon={<Calendar className="h-8 w-8 text-indigo-600" />}

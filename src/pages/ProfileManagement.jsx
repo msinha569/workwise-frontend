@@ -52,7 +52,6 @@ function ProfileManagement() {
     <div className='w-full'> 
     <ProfileSection/>
     </div>
-        {/* Workload Calendar */}
         <section className="bg-white p-6 rounded-lg shadow-md w-full">
         <h2 className="text-xl font-semibold mb-4">Workload</h2>
         <div className="border rounded-lg p-4 w-full flex justify-center">
@@ -76,7 +75,6 @@ function ProfileManagement() {
 
 
 
-        {/* Skills */}
         <section className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold mb-4">Skills</h2>
           <form onSubmit={handleAddSkill} className="mb-4">
@@ -114,7 +112,6 @@ function ProfileManagement() {
           </div>
         </section>
 
-        {/* Feedback */}
         <section className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold mb-4">Feedback</h2>
           {loading ? (
@@ -145,7 +142,6 @@ function ProfileManagement() {
           )}
         </section>
 
-          {/* Goals */}
         <section className="bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-xl font-semibold mb-4">Goals</h2>
         {loading ? (

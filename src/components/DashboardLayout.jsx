@@ -22,7 +22,6 @@ export function DashboardLayout() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Sidebar */}
       <aside className="fixed inset-y-0 left-0 w-64 bg-white border-r border-gray-200">
         <div className="flex items-center gap-2 px-6 py-4 border-b">
           <Brain className="h-8 w-8 text-indigo-600" />
@@ -68,7 +67,6 @@ export function DashboardLayout() {
         </nav>
       </aside>
 
-      {/* Main Content */}
       <div className="ml-64">
         {/* Header */}
         <header className="bg-white border-b border-gray-200">
@@ -94,10 +92,7 @@ export function DashboardLayout() {
           </div>
         </header>
 
-        {/* Page Content */}
-        <main className="p-8">
-          <Outlet />
-        </main>
+       
       </div>
     </div>
   );
