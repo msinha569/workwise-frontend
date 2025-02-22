@@ -11,10 +11,14 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import TaskList from '../components/TaskList';
+import GetAllUsers from '../components/GetAllUsers';
 
 function Dashboard() {
   return (
     <div className="space-y-10 p-6 ">
+       <Link to={'/'}><button className="flex fixed left-4 top-4 items-center gap-2 px-4 py-2 border rounded-md text-gray-700 hover:bg-gray-100">
+       ⬅️ <FileText className="h-5 w-5" /> Home
+          </button></Link>
       <section className=''>
         <h2 className="text-xl font-semibold text-gray-900">Management Actions</h2>
         <p className="text-gray-600 mb-4">Manage work, employees, and feedback efficiently using the tools below.</p>
@@ -29,6 +33,11 @@ function Dashboard() {
             <FileText className="h-5 w-5" /> Delete Task
           </button>
           </Link>
+          <Link to={'/createuser'}>
+          <button className="flex items-center gap-2 px-4 py-2 border rounded-md text-gray-700 hover:bg-gray-100">
+            <FileText className="h-5 w-5" /> Create User
+          </button>
+          </Link>
           
           {/* <Link to={'/feedback'}>
           <button className="flex items-center gap-2 px-4 py-2 border rounded-md text-gray-700 hover:bg-gray-100">
@@ -37,7 +46,7 @@ function Dashboard() {
           </Link> */}
         </div>
       </section>
-
+            <GetAllUsers/>
      
 
       <TaskList />
@@ -52,6 +61,8 @@ function StatCard({ icon, title, value, change, trend }) {
         <div className="flex items-center gap-4">
           <div className="p-3 bg-gray-50 rounded-lg">
             {icon}
+          </div>
+          <div>
           </div>
           <div>
             <h3 className="text-sm font-medium text-gray-500">{title}</h3>
