@@ -8,7 +8,7 @@ import Home from './pages/Home';
 import FeedbackPage from './pages/FeedbackForm';
 import CreateTask from './pages/CreateTask';
 import CreateUser from './components/CreateUser';
-import TaskResults from './components/TaskResults';
+import TaskResults from './pages/TaskResults';
 import DeleteTask from './components/DeleteTask';
 
 function App() {
