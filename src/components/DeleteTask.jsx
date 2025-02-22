@@ -14,7 +14,7 @@ export default function DeleteTask() {
     }
 
     try {
-      const response = await fetch(`http://192.168.200.229:8000/delete_task?id=${taskId}`, {
+      const response = await fetch(`https://model.aaroegun.in/delete_task?id=${taskId}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       });

@@ -50,7 +50,7 @@ export default function CreateUser() {
 
       console.log("User Payload:", payload);
 
-      const response = await fetch("http://192.168.200.229:8000/create_user", {
+      const response = await fetch("https://model.aaroegun.in/create_user", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

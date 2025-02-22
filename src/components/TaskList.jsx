@@ -12,7 +12,7 @@ export default function TaskList() {
     const fetchTaskIds = async () => {
       try {
         // Step 1: Fetch only task IDs
-        const response = await fetch("http://192.168.200.229:8000/get_all_tasks");
+        const response = await fetch("https://model.aaroegun.in/get_all_tasks");
         if (!response.ok) throw new Error("Failed to fetch task IDs");
 
         const ids = await response.json();
@@ -33,7 +33,7 @@ export default function TaskList() {
     if (taskDetails[id]) return; // Prevent refetching if already loaded
 
     try {
-      const response = await fetch(`http://192.168.200.229:8000/get_task?id=${id}`);
+      const response = await fetch(`https://model.aaroegun.in/get_task?id=${id}`);
       if (!response.ok) throw new Error("Failed to fetch task details");
 
       const task = await response.json();

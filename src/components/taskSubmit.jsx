@@ -45,7 +45,7 @@ export default function CreateTask() {
       }
       console.log("payload2 is ",payload2);
 
-      const response = await fetch("http://192.168.200.229:8000/task_submit", {
+      const response = await fetch("https://model.aaroegun.in/task_submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         
@@ -68,7 +68,7 @@ export default function CreateTask() {
 
       for (const key of Object.keys(data.compatible_users)) {
         try {
-          const response = await fetch(`http://192.168.200.229:8000/get_user?id=${key}`, {
+          const response = await fetch(`https://model.aaroegun.in/get_user?id=${key}`, {
             method: "GET",
             headers: { "Content-Type": "application/json" },
           });
